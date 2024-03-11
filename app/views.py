@@ -111,7 +111,6 @@ def files():
 @app.route('/logout')
 def logout():
     logout_user()
-    session.pop('logged_in', None)
     flash('You Have Successfully Logged Out!')
     return redirect(url_for('home'))
 
